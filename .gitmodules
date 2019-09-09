@@ -1,0 +1,3 @@
+[submodule "vendor/artichoke"]
+	path = vendor/artichoke
+	url = git@github.com:artichoke/artichoke.git

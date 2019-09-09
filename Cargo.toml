@@ -1,0 +1,11 @@
+[package]
+name = "hakoniwa-world"
+version = "0.1.0"
+authors = ["Aofusa <5000enPCinAOFUSA@gmail.com>"]
+edition = "2018"
+
+
+[dependencies]
+piston_window = "0.104.0"
+artichoke-backend = { path = "vendor/artichoke/artichoke-backend" }
+artichoke-core = { path = "vendor/artichoke/artichoke-core" }
