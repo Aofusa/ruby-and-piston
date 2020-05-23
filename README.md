@@ -4,7 +4,7 @@ Ruby と Piston を組み合わせる
 
 ## 事前情報
 Artichoke と Piston 使います  
-Rust は Stable じゃないと動かない(1.37 stable で動作確認)  
+Rust は Stable じゃないと動かない(1.43 stable で動作確認)  
 
 
 ## Rubyの準備

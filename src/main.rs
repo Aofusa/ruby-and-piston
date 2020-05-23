@@ -1,17 +1,19 @@
 extern crate piston_window;
-extern crate artichoke_backend;
-extern crate artichoke_core;
 
-use artichoke_backend::eval::Eval;
-use artichoke_core::value::Value as ValueLike;
+use artichoke_backend::prelude::core::*;
+use artichoke_backend::prelude::*;
 use piston_window::*;
 
+fn example() -> i64 {
+    let mut interp = artichoke_backend::interpreter().unwrap();
+    let result = interp.eval(b"10 * 10").unwrap();
+    let result = result.try_into::<i64>(&interp).unwrap();
+    assert_eq!(100, result);
+    return result;
+}
+
 fn main() {
-    let interp = artichoke_backend::interpreter().unwrap();
-    let result = interp.eval("10 * 10").unwrap();
-    let result = result.try_into::<i64>();
-    assert_eq!(result, Ok(100));
-    println!("result {}", result.unwrap());
+    println!("result {}", example());
 
     let mut window: PistonWindow =
         WindowSettings::new("Hello Piston!", [640, 480])
